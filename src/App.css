@@ -1,42 +1,96 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+body {
+  margin: 0;
+  padding: 0;
+  background: url("/background.png") no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+  margin-top: 20px;
+}
+
+h1 {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.25);
+  padding: 26px 40px;
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(4px);
   text-align: center;
+  font-size: 52px;
+  margin: 0;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 480px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #0004;
+  backdrop-filter: blur(6px);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+label {
+  display: flex;
+  flex-direction: column;
+  color: #f0f0f0;
+  font-size: 22px;
+}
+
+select,
+input[type="range"] {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 6px;
+  border: none;
+}
+
+.checkbox {
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  font-size: 22px;
+}
+
+button {
+  padding: 14px;
+  background: #0066ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+button:hover {
+  background: #004bcc;
+}
+
+.result {
+  text-align: center;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 6px;
+  color: #fff;
+  font-size: 24px;
+}
+
+@media (max-width: 480px) {
+  .form {
+    width: 90%;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
