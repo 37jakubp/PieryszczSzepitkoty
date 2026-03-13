@@ -33,7 +33,7 @@ function App() {
                 <button>Oblicz cenę</button>
 
                 <div className="result">
-                    <h2>Cena końcowa: — zł</h2>
+                    <h2>Cena końcowa : — zł</h2>
                 </div>
             </div>
         </div>
