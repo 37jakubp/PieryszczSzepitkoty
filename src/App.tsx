@@ -1,35 +1,43 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+    return (
+        <div className="container">
+            <h1>Mazurska Przystań – Rezerwacja</h1>
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+            <div className="form">
+                <label>
+                    Wybierz łódkę:
+                    <select>
+                        <option>Kajak – 40 zł</option>
+                        <option>Rower wodny – 60 zł</option>
+                        <option>Łódź wiosłowa – 120 zł</option>
+                    </select>
+                </label>
+
+                <label>
+                    Liczba godzin:
+                    <input type="range" min={1} max={10} />
+                </label>
+
+                <label className="checkbox">
+                    <input type="checkbox" />
+                    Kapoki (+20 zł)
+                </label>
+
+                <label className="checkbox">
+                    <input type="checkbox" />
+                    Instruktor (+50 zł)
+                </label>
+
+                <button>Oblicz cenę</button>
+
+                <div className="result">
+                    <h2>Cena końcowa : — zł</h2>
+                </div>
+            </div>
+        </div>
+    );
 }
 
-export default App
+export default App;
