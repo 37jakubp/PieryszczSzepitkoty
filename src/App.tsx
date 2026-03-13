@@ -30,7 +30,7 @@ function App() {
                     Instruktor (+50 zł)
                 </label>
 
-                <button>Oblicz cenę</button>
+                <button>Oblicz cenę </button>
 
                 <div className="result">
                     <h2>Cena końcowa : — zł</h2>
